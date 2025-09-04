@@ -1,3 +1,43 @@
+# EduPath Navigator – Your Personalized Career & College Guide
+
+A modern, responsive landing page for an online career and education guidance platform built with **HTML, CSS, and JavaScript**.  
+
+## 🚀 Features
+
+- **Modern Design**: Clean, professional design with gradient accents and smooth animations  
+- **Responsive Layout**: Fully responsive design that works across devices  
+- **Interactive Elements**: Smooth scrolling, hover effects, and animated counters  
+- **Personalized Guidance**: Focused on aptitude, interests, and career pathways  
+- **Performance Optimized**: Fast loading with optimized assets and efficient CSS  
+
+## 📑 Sections
+
+1. **Navigation Bar** – Fixed navigation with smooth scrolling and mobile hamburger menu  
+2. **Hero Section** – Eye-catching hero with animated career/college progress cards and floating elements  
+3. **Features Section** – Highlights platform features like aptitude tests, career mapping, and college finder  
+4. **Programs & Careers Section** – Grid-based section showing streams (Arts, Science, Commerce, Vocational) with career outcomes  
+5. **Testimonials** – Student, parent, and teacher testimonials with profile images  
+6. **Call-to-Action** – Prominent CTA encouraging students to explore career paths and colleges  
+7. **Footer** – Comprehensive footer with quick links and social media  
+
+## 🛠️ Technologies Used
+
+- **HTML5**: Semantic markup structure  
+- **CSS3**: Modern CSS with Flexbox, Grid, and animations  
+- **JavaScript**: Interactive functionality and smooth animations  
+- **Font Awesome**: Icons for UI elements  
+- **Google Fonts**: Inter font family for typography  
+
+## 📂 File Structure
+
+```
+edupath/
+├── index.html # Main HTML file
+├── styles.css # CSS styles and animations
+├── script.js # JavaScript functionality
+└── README.md # Project documentation
+
+```
 ## 🎨 Key Features Implemented
 
 ### Design Elements
