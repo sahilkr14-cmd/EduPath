@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduPath - Streams After Class 10 & 12</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            display: grid;
+            text-align: center;
+            margin-top: 115px;
+            margin-left: 25%;
+            padding: 20px 0;
+            background: #3b82f6;
+            color: white;
+            border-radius: 10px;
+            width: 50%;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            /* Reduced from 2.5rem */
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e5e7eb;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: 700;
+            color: #3b82f6;
+        }
+
+        .nav-logo i {
+            font-size: 28px;
+        }
+
+        .nav-logo .logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #6b7280;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #3b82f6;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .user-menu {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .user-menu .user-name {
+            font-weight: 600;
+            color: #374151;
+        }
+
+        h2 {
+            margin-top: 100px;
+            margin-bottom: 30px;
+            color: #111827;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .school-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .school-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .school-name {
+            font-size: 1 rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .learn-more {
+            text-decoration: none;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            padding: 10px 16px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 13px;
+            width: 50%;
+            margin-top: 20px;
+        }
+
+        .learn-more a {
+            align-items: center;
+        }
+
+        .learn-more:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .section {
+            margin-bottom: 50px;
+            padding: 0px 50px;
+        }
+
+        .school-typegov {
+            color: blue;
+            margin-bottom: 10px;
+        }
+
+        .school-typeprivate {
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #111827;
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: 700;
+            color: #3b82f6;
+            margin-bottom: 16px;
+        }
+
+        .footer-logo i {
+            font-size: 28px;
+        }
+
+        .footer-section p {
+            color: #9ca3af;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .footer-section h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section ul li a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: #3b82f6;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: #374151;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 20px;
+            text-align: center;
+            color: #9ca3af;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                display: block;
+                text-align: center;
+                margin-top: 115px;
+                margin-left: 10%;
+                padding: 20px 0;
+                background: #3b82f6;
+                color: white;
+                border-radius: 10px;
+                width: 80%;
+            }
+
+            .header h1 {
+                font-size: 1rem;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .nav-buttons {
+                display: none;
+
+            }
+
+            .dropdown-menu {
+                position: static;
+                box-shadow: none;
+                background: #f8fafc;
+                padding: 15px 0;
+                /* Increased padding for mobile */
+                min-width: 250px;
+                /* Increased minimum width for mobile */
+            }
+
+            .dropdown-menu.active {
+                display: block;
+            }
+
+            .nav-menu.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                gap: 15px;
+            }
+
+            .nav-buttons.active {
+                display: flex;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                justify-content: center;
+                margin-top: 60px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img class="logo" src="logo.jpg" alt="EduPath">
+                <span>EduPath</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                <li><a href="streams.html">Streams</a></li>
+                </li>
+
+                <li class="dropdown">
+                    <a href="school.html" class="dropdown-toggle">Institutions <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school.html">10th (Schools)</a></li>
+                        <li><a href="higher-secondary.html">12th (Higher Secondary)</a></li>
+                        <li><a href="colleges.html">Colleges</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#scholarships" class="dropdown-toggle">Scholarships <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://dsel.education.gov.in/en/scheme/nmmss">NMMSS </a></li>
+                        <li><a href="https://scholarships.gov.in/">Nation Scholarship Portal</a></li>
+                        <li><a href="shttps://socialjustice.gov.in/schemes/23">Pre-Matric Scholarship for ST</a></li>
+                        <li><a href="https://desw.gov.in/prime-ministers-scholarship-scheme-pmss">PMSSS 2025</a></li>
+                        <li><a
+                                href="https://www.education.gov.in/pradhan-mantri-uchchatar-shiksha-protsahan-pm-usp-yojana">PM-USP</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li><a href="#quizzes">Quizzes</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a id="signupBtn" class="btn-secondary" href="signup.html">Sign Up</a>
+                <a id="loginBtn" class="btn-primary" href="login.html">Login</a>
+            </div>
+            <div id="userMenu" class="user-menu" style="display: none;">
+                <span class="user-name" id="navUsername"></span>
+                <button id="logoutBtn" class="btn-secondary">Logout</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <div class="header">
+        <h1>10th Grade Schools - Jammu & Kashmir</h1>
+    </div>
+
+    <!-- Government Schools -->
+    <div class="section">
+        <h2>Government Schools</h2>
+        <div class="card-container">
+            <div class="school-card">
+                <div class="school-typegov">Government</div>
+                <div class="school-name">Govt. Higher Secondary School, Gandhinagar</div>
+                <a href="https://www.justdial.com/Jammu/Govt-Higher-Secondary-School-Gandhinagar/9999P5P5-5P5P5-5P5P5.html"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+            <div class="school-card">
+                <div class="school-typegov">Government</div>
+                <div class="school-name">Govt. Higher Secondary School, Kothibagh</div>
+                <a href="https://www.justdial.com/Srinagar/Govt-Girls-Higher-Secondary-School-Kothibagh/9999P5P5-5P5P5-5P5P5.html"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+            <div class="school-card">
+                <div class="school-typegov">Government</div>
+                <div class="school-name">Govt. Higher Secondary School, Poonch</div>
+                <a href="https://www.justdial.com/Poonch/Govt-Higher-Secondary-School/9999P1965-1965-250208063259-W5L3_BZDET"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+            <div class="school-card">
+                <div class="school-typegov">Government</div>
+                <div class="school-name">Govt. Higher Secondary School, Sopore</div>
+                <a href="https://www.justdial.com/Baramulla/Government-Boys-Higher-Secondary-School-Sopore/9999P1952-1952-181128084115-G9K7_BZDET"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+            <div class="school-card">
+                <div class="school-typegov">Government</div>
+                <div class="school-name">Govt. Higher Secondary School, Kathua</div>
+                <a href="https://www.justdial.com/Kathua/Government-Higher-Secondary-School-Plassy/9999P1922-1922-170605144857-M5Y6_BZDET"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+            <div class="school-card">
+                <div class="school-typegov">Government</div>
+                <div class="school-name">Govt. Higher Secondary School, Jandrah</div>
+                <a href="https://www.justdial.com/Jammu/Jandrah-Government-Higher-School/9999PX191-X191-240528041843-R3I2_BZDET"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+            <div class="school-card">
+                <div class="school-typegov">Government</div>
+                <div class="school-name">Govt. Higher Secondary School, Jhajjar Kotli</div>
+                <a href="https://www.justdial.com/Jammu/Secondary-Schools-in-J-Kotli/nct-12099606" class="learn-more"
+                    target="_blank">Learn More</a>
+            </div>
+            <div class="school-card">
+                <div class="school-typegov">Government</div>
+                <div class="school-name">Govt. Higher Secondary School, Nunnar</div>
+                <a href="https://www.justdial.com/Srinagar/Secondary-Schools-in-Nunnar/nct-12099606" class="learn-more"
+                    target="_blank">Learn More</a>
+            </div>
+            <div class="school-card">
+                <div class="school-typegov">Government</div>
+                <div class="school-name">Govt. Higher Secondary School, Ganderbal</div>
+                <a href="https://www.justdial.com/Ganderbal/Secondary-Schools-in-Ganderbal/nct-12099606"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+            <div class="school-card">
+                <div class="school-typegov">Government</div>
+                <div class="school-name">Govt. High School, Banjal</div>
+                <a href="https://www.justdial.com/Jammu/Secondary-Schools-in-Banjal/nct-12099606" class="learn-more"
+                    target="_blank">Learn More</a>
+            </div>
+            <div class="school-card">
+                <div class="school-typegov">Government</div>
+                <div class="school-name">Govt. High School, Anantnag</div>
+                <a href="https://www.justdial.com/Anantnag/Secondary-Schools-in-Anantnag/nct-12099606"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+            <div class="school-card">
+                <div class="school-typegov">Government</div>
+                <div class="school-name">Govt. High School, Srinagar</div>
+                <a href="https://www.justdial.com/Srinagar/Secondary-Schools-in-Srinagar/nct-12099606"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+            <div class="school-card">
+                <div class="school-typegov">Government</div>
+                <div class="school-name">Govt. High School, Jammu</div>
+                <a href="https://www.justdial.com/Jammu/Secondary-Schools-in-Jammu/nct-12099606" class="learn-more"
+                    target="_blank">Learn More</a>
+            </div>
+            <div class="school-card">
+                <div class="school-typegov">Government</div>
+                <div class="school-name">Govt. High School, Udhampur</div>
+                <a href="https://www.justdial.com/Udhampur/Secondary-Schools-in-Udhampur/nct-12099606"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+            <div class="school-card">
+                <div class="school-typegov">Government</div>
+                <div class="school-name">Govt. High School, Rajouri</div>
+                <a href="https://www.justdial.com/Rajouri/Secondary-Schools-in-Rajouri/nct-12099606" class="learn-more"
+                    target="_blank">Learn More</a>
+            </div>
+            <div class="school-card">
+                <div class="school-typegov">Government</div>
+                <div class="school-name">Govt. High School, Pulwama</div>
+                <a href="https://www.justdial.com/Pulwama/Secondary-Schools-in-Pulwama/nct-12099606" class="learn-more"
+                    target="_blank">Learn More</a>
+            </div>
+            <div class="school-card">
+                <div class="school-typegov">Government</div>
+                <div class="school-name">Govt. High School, Baramulla</div>
+                <a href="https://www.justdial.com/Baramulla/Secondary-Schools-in-Baramulla/nct-12099606"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+            <div class="school-card">
+                <div class="school-typegov">Government</div>
+                <div class="school-name">Govt. High School, Kupwara</div>
+                <a href="https://www.justdial.com/Kupwara/Secondary-Schools-in-Kupwara/nct-12099606" class="learn-more"
+                    target="_blank">Learn More</a>
+            </div>
+            <div class="school-card">
+                <div class="school-typegov">Government</div>
+                <div class="school-name">Govt. High School, Ramban</div>
+                <a href="https://www.justdial.com/Ramban/Secondary-Schools-in-Ramban/nct-12099606" class="learn-more"
+                    target="_blank">Learn More</a>
+            </div>
+            <div class="school-card">
+                <div class="school-typegov">Government</div>
+                <div class="school-name">Govt. High School, Leh</div>
+                <a href="https://www.justdial.com/Leh/Secondary-Schools-in-Leh/nct-12099606" class="learn-more"
+                    target="_blank">Learn More</a>
+            </div>
+        </div>
+    </div>
+    <!-- Private Schools -->
+    <div class="section">
+        <h2>Private Schools</h2>
+        <div class="card-container">
+            <div class="school-card">
+                <div class="school-typeprivate">Private</div>
+                <div class="school-name">St. Xavier Convent School, Jammu</div>
+                <a href="https://www.justdial.com/Jammu/St-Xavier-Convent-School/9999P1922-1922-170605144857-M5Y6_BZDET"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+
+            <div class="school-card">
+                <div class="school-typeprivate">Private</div>
+                <div class="school-name">Dogra Group of Institutions, Bari Brahmana</div>
+                <a href="https://www.justdial.com/Jammu/Dogra-Group-of-Institutions/9999P1922-1922-170605144857-M5Y6_BZDET"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+
+            <div class="school-card">
+                <div class="school-typeprivate">Private</div>
+                <div class="school-name">Shaurya International School, Jammu</div>
+                <a href="https://www.justdial.com/Jammu/Shaurya-International-School/9999P1922-1922-170605144857-M5Y6_BZDET"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+
+            <div class="school-card">
+                <div class="school-typeprivate">Private</div>
+                <div class="school-name">Daily Rising Sun International School, Jammu</div>
+                <a href="https://www.justdial.com/Jammu/Daily-Rising-Sun-International-School/9999P1922-1922-170605144857-M5Y6_BZDET"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+
+            <div class="school-card">
+                <div class="school-typeprivate">Private</div>
+                <div class="school-name">Delhi Public School, Jammu</div>
+                <a href="https://www.justdial.com/Jammu/Delhi-Public-School/9999P1922-1922-170605144857-M5Y6_BZDET"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+
+            <div class="school-card">
+                <div class="school-typeprivate">Private</div>
+                <div class="school-name">Wazir Janki Nath Memorial School, Jammu</div>
+                <a href="https://www.justdial.com/Jammu/Wazir-Janki-Nath-Memorial-School/9999P1922-1922-170605144857-M5Y6_BZDET"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+
+            <div class="school-card">
+                <div class="school-typeprivate">Private</div>
+                <div class="school-name">Play Way House School, Pounichak</div>
+                <a href="https://www.justdial.com/Jammu/Play-Way-House-School/9999P1922-1922-170605144857-M5Y6_BZDET"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+
+            <div class="school-card">
+                <div class="school-typeprivate">Private</div>
+                <div class="school-name">GLS Public School, Jammu</div>
+                <a href="https://www.justdial.com/Jammu/GLS-Public-School/9999P1922-1922-170605144857-M5Y6_BZDET"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+
+            <div class="school-card">
+                <div class="school-typeprivate">Private</div>
+                <div class="school-name">Kiddee Care Public School, Jammu</div>
+                <a href="https://www.justdial.com/Jammu/Kiddee-Care-Public-School/9999P1922-1922-170605144857-M5Y6_BZDET"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+
+            <div class="school-card">
+                <div class="school-typeprivate">Private</div>
+                <div class="school-name">National Academy High School, Jammu</div>
+                <a href="https://www.justdial.com/Jammu/National-Academy-High-School/9999P1922-1922-170605144857-M5Y6_BZDET"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+
+            <div class="school-card">
+                <div class="school-typeprivate">Private</div>
+                <div class="school-name">Tyndale Biscoe School, Srinagar</div>
+                <a href="https://www.justdial.com/Srinagar/Tyndale-Biscoe-School/9999P1922-1922-170605144857-M5Y6_BZDET"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+
+            <div class="school-card">
+                <div class="school-typeprivate">Private</div>
+                <div class="school-name">Modern English School, Jammu</div>
+                <a href="https://www.justdial.com/Jammu/Modern-English-School/9999P1922-1922-170605144857-M5Y6_BZDET"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+
+            <div class="school-card">
+                <div class="school-typeprivate">Private</div>
+                <div class="school-name">Presentation Convent School, Srinagar</div>
+                <a href="https://www.justdial.com/Srinagar/Presentation-Convent-School/9999P1922-1922-170605144857-M5Y6_BZDET"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+
+            <div class="school-card">
+                <div class="school-typeprivate">Private</div>
+                <div class="school-name">Mount Carmel School, Jammu</div>
+                <a href="https://www.justdial.com/Jammu/Mount-Carmel-School/9999P1922-1922-170605144857-M5Y6_BZDET"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+
+            <div class="school-card">
+                <div class="school-typeprivate">Private</div>
+                <div class="school-name">Glen Hill Public School, Srinagar</div>
+                <a href="https://www.justdial.com/Srinagar/Glen-Hill-Public-School/9999P1922-1922-170605144857-M5Y6_BZDET"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+
+            <div class="school-card">
+                <div class="school-typeprivate">Private</div>
+                <div class="school-name">Silver Oaks International School, Srinagar</div>
+                <a href="https://www.justdial.com/Srinagar/Silver-Oaks-International-School/9999P1922-1922-170605144857-M5Y6_BZDET"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+
+            <div class="school-card">
+                <div class="school-typeprivate">Private</div>
+                <div class="school-name">Bright Future International School, Jammu</div>
+                <a href="https://www.justdial.com/Jammu/Bright-Future-International-School/9999P1922-1922-170605144857-M5Y6_BZDET"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+
+            <div class="school-card">
+                <div class="school-typeprivate">Private</div>
+                <div class="school-name">Sacred Heart Higher Secondary School, Srinagar</div>
+                <a href="https://www.justdial.com/Srinagar/Sacred-Heart-Higher-Secondary-School/9999P1922-1922-170605144857-M5Y6_BZDET"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+
+            <div class="school-card">
+                <div class="school-typeprivate">Private</div>
+                <div class="school-name">Royal International School, Jammu</div>
+                <a href="https://www.justdial.com/Jammu/Royal-International-School/9999P1922-1922-170605144857-M5Y6_BZDET"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+
+            <div class="school-card">
+                <div class="school-typeprivate">Private</div>
+                <div class="school-name">Evergreen Higher Secondary School, Jammu</div>
+                <a href="https://www.justdial.com/Jammu/Evergreen-Higher-Secondary-School/9999P1922-1922-170605144857-M5Y6_BZDET"
+                    class="learn-more" target="_blank">Learn More</a>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-globe"></i>
+                        <span>EduPath</span>
+                    </div>
+                    <p>Connecting the world through career guidance</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Quizzes</a></li>
+                        <li><a href="#">Streams</a></li>
+                        <li><a href="#">Colleges</a></li>
+                        <li><a href="#">Scholarships</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EduPath. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

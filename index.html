@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduPath - Digital Guidance Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img class="logo" src="logo.jpg" alt="EduPath">
+                <span>EduPath</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                <li><a href="streams.html">Streams</a></li>
+                </li>
+
+                <li class="dropdown">
+                    <a href="school.html" class="dropdown-toggle">Institutions <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school.html">10th (Schools)</a></li>
+                        <li><a href="higher-secondary.html">12th (Higher Secondary)</a></li>
+                        <li><a href="colleges.html">Colleges</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#scholarships" class="dropdown-toggle">Scholarships <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://dsel.education.gov.in/en/scheme/nmmss">NMMSS </a></li>
+                        <li><a href="https://scholarships.gov.in/">Nation Scholarship Portal</a></li>
+                        <li><a href="shttps://socialjustice.gov.in/schemes/23">Pre-Matric Scholarship for ST</a></li>
+                        <li><a href="https://desw.gov.in/prime-ministers-scholarship-scheme-pmss">PMSSS 2025</a></li>
+                        <li><a
+                                href="https://www.education.gov.in/pradhan-mantri-uchchatar-shiksha-protsahan-pm-usp-yojana">PM-USP</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li><a href="#quizzes">Quizzes</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact-form">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a id="signupBtn" class="btn-secondary" href="signup.html">Sign Up</a>
+                <a id="loginBtn" class="btn-primary" href="login.html">Login</a>
+            </div>
+            <div id="userMenu" class="user-menu" style="display: none;">
+                <span class="user-name" id="navUsername"></span>
+                <button id="logoutBtn" class="btn-secondary">Logout</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    EduPath - <br>
+                    <span>Your Path to Success</span>
+                </h1>
+                <p class="hero-description">
+                    EduPath is a personalized digital guidance platform designed to support students in making the right
+                    academic and career choices after Class 10 and 12. From selecting subject streams to exploring
+                    government college programs and mapping degree-to-career pathways, EduPath acts as a one-stop
+                    solution for informed decision-making. With aptitude-based quizzes, visual career charts, a verified
+                    directory of nearby government colleges, and timely alerts for admissions and scholarships, EduPath
+                    empowers students to plan their future with clarity and confidence.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-primary btn-large">Choose Stream</button>
+                    <button class="btn-outline btn-large">
+                        Explore Colleges
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">146</span>
+                        <span class="stat-label">Active Courses</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">140+</span>
+                        <span class="stat-label">Colleges</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Programs</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-card">
+                    <div class="card-header">
+                        <div class="user-info">
+                            <p>Available</p>
+                            <h4>Scholarships</h4>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="lesson-card">
+                            <h5>PM-USP</h5>
+                            <p>The Pradhan Mantri Uchchatar Shiksha Protsahan</p>
+                            <div class="lesson-progress">
+                                <span>Learn More</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-elements">
+                    <div class="floating-card card-1">
+                        <i class="fas fa-trophy"></i>
+                        <span>Claim Your Scholarship!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose EduPath?</h2>
+                <p>Guiding students from classrooms to careers with clarity</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Personalized Guidance</h3>
+                    <p>Every student is unique. EduPath uses aptitude and interest-based assessments to suggest the most
+                        suitable streams, degree courses, and career paths</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Clarity in Career Choices</h3>
+                    <p>Visual career maps show students exactly where a particular degree can take them — from jobs and
+                        government exams to higher studies and entrepreneurship.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <h3>Trusted Government College Information</h3>
+                    <p>Verified listings of nearby government colleges with details about programs, cut-offs,
+                        facilities, and admissions — all in one place.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile First</h3>
+                    <p>Learn anywhere, anytime with our mobile-optimized platform</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section class="languages">
+        <div class="container">
+            <div class="section-header">
+                <h2>About</h2>
+                <p>EduPath was built on the belief that lack of awareness, not lack of resources, is the primary reason
+                    behind declining enrollment in government degree colleges. Our mission is to bridge this gap by
+                    guiding students and parents with reliable, localized, and actionable career insights.</p>
+            </div>
+            <div class="languages-grid">
+                <div class="language-card">
+                    <h4>Stream & Course Guidance</h4>
+                    <p>Aptitude-based recommendations for Arts, Science, Commerce, or vocational streams.</p>
+                </div>
+                <div class="language-card">
+                    <h4>Career Mapping</h4>
+                    <p>Clear insights into job opportunities, higher studies, and exams linked to each degree.</p>
+                </div>
+                <div class="language-card">
+                    <h4>Government College Directory</h4>
+                    <p>Verified listings with courses, facilities, cut-offs, and admission details.</p>
+                </div>
+                <div class="language-card">
+                    <h4>Smart Notifications</h4>
+                    <p>Admission dates, scholarship windows, and entrance test alerts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Users Say</h2>
+                <p>Real stories from our Users</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"LinguaConnect helped me achieve fluency in Spanish in just 6 months. The community features
+                            made learning fun and engaging!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face"
+                            alt="Alex">
+                        <div>
+                            <h5>Alex Chen</h5>
+                            <p>Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The AI-powered lessons adapt perfectly to my learning style. I've never learned a language
+                            this efficiently before!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face"
+                            alt="Maria">
+                        <div>
+                            <h5>Maria Rodriguez</h5>
+                            <p>Marketing Manager</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Connecting with native speakers through the platform has been incredible. My confidence in
+                            speaking has grown tremendously!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face"
+                            alt="David">
+                        <div>
+                            <h5>David Kim</h5>
+                            <p>Student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+
+    <section id="contact-form">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+                </p>
+            </div>
+            <div class="form-container">
+                <form id="contactForm" class="contact-form-element">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" id="submitBtn" class="btn-primary btn-large">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+                <div id="form-message"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Newsletter Signup Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Stay Updated</h2>
+                    <p>Never miss an opportunity with EduPath — get timely alerts on admissions, scholarships, exams,
+                        and career resources, all personalized to your stream and goals.</p>
+                </div>
+                <form id="newsletterForm" class="newsletter-form" action="api/subscribe_newsletter.php" method="POST">
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            Subscribe
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Career Journey?</h2>
+                <p>Join our aptitude quizzes and start your career today</p>
+                <div class="cta-buttons">
+                    <button class="btn-primary btn-large">Start Test</button>
+                    <button class="btn-outline btn-large">View Results</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-globe"></i>
+                        <span>EduPath</span>
+                    </div>
+                    <p>Connecting the world through career guidance</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Quizzes</a></li>
+                        <li><a href="#">Streams</a></li>
+                        <li><a href="#">Colleges</a></li>
+                        <li><a href="#">Scholarships</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EduPath. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
